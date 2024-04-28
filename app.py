@@ -1,3 +1,6 @@
+import os
+from dotenv import load_dotenv
+
 from fastapi import FastAPI, BackgroundTasks
 from pydantic import BaseModel
 import uvicorn
@@ -8,9 +11,9 @@ from supabase import create_client, Client
 
 app = FastAPI()
 
-
-SUPABASE_URL = 'https://zssvyrzmkiactcjpplef.supabase.co'
-SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpzc3Z5cnpta2lhY3RjanBwbGVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQyMjU4NTYsImV4cCI6MjAyOTgwMTg1Nn0.epg726eSwk1mJBiMjYDunKpU8B47iEllbLAxk2vjYUg'
+load_dotenv()
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 class CompanyRequest(BaseModel):
