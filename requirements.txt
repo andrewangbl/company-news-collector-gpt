@@ -12,3 +12,8 @@ langchain-community
 
 bs4
 requests
+
+typing
+dotenv
+os
+json
