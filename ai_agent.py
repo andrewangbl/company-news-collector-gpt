@@ -1,17 +1,11 @@
-import numpy as np
-import pandas as pd
-
 import os
 from dotenv import load_dotenv
 
 # from langchain import PromptTemplate
-from langchain.agents import initialize_agent, Tool
-from langchain.agents import AgentType
 
 from langchain_community.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
-from langchain.prompts import MessagesPlaceholder
-from langchain.memory import ConversationSummaryBufferMemory
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
 from langchain.tools import BaseTool
@@ -23,13 +17,9 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-from langchain.schema import SystemMessage
 
 from langchain_community.utilities import GoogleSerperAPIWrapper
 
-from langchain.prompts import PromptTemplate
-from langchain.prompts import MessagesPlaceholder
-from langchain.memory import ConversationSummaryBufferMemory
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
 from langchain.tools import BaseTool
