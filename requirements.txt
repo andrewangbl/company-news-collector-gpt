@@ -11,5 +11,7 @@ langchain
 langchain-community
 openai
 
+tiktoken
+
 bs4
 requests
