@@ -7,10 +7,8 @@ pydantic
 supabase
 
 # dotenv  # For loading environment variables from .env files
-# bs4 # For parsing HTML and XML documents
-# requests  # For making HTTP requests
-# pydantic
-
-
 langchain
 langchain-community
+
+bs4
+requests
