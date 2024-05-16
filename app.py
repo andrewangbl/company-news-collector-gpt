@@ -63,6 +63,7 @@ async def scrape(background_tasks: BackgroundTasks):
 # Run the server only if this file is executed directly
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
+    
     '''
     acg_query=generate_news_queries('AGC Incorporated')
     acg_financial_news = search_news(acg_query[4]['query'])
