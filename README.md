@@ -1,9 +1,15 @@
 # Company News Collecter
 
 The Company News Collecter is a scalable backend API built for gathering, scraping, and summarizing relevant business news from various online sources.
-It integrates the Google Serper API for news search, the Browserless API for web scraping, and OpenAI's GPT-3.5 model for summarization. The tool efficiently retrieves up-to-date news articles based on specific queries, extracts content from targeted websites, and generates concise summaries tailored to specific business objectives.
+It integrates the Google Serper API for news search, the Browserless API for web scraping, and OpenAI's GPT-3.5 model for summarization.
+
+
+The tool efficiently retrieves up-to-date news articles based on specific queries, extracts content from targeted websites, and generates concise summaries tailored to specific business objectives.
 The project employs a map-reduce method for summarization by spliting the text into manageable chunks, processing each chunk to extract key insights, and then combining the results to produce the summary.
+
+
 By customizing the search queries and objectives, users can tailor the focus on aspects like financial health, corporate announcements, supply chain stability, market position, and regulatory compliance of supplier companies.
+
 
 Flow chart of News Collecting Agent:
 ![agent-flowchart](./graph/agent_flowchart.png)
