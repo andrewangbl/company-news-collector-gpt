@@ -5,11 +5,11 @@ It integrates the Google Serper API for news search, the Browserless API for web
 The project employs a map-reduce method for summarization by spliting the text into manageable chunks, processing each chunk to extract key insights, and then combining the results to produce the summary.
 By customizing the search queries and objectives, users can tailor the focus on aspects like financial health, corporate announcements, supply chain stability, market position, and regulatory compliance of supplier companies.
 
-The flow chart of News Collecting Agent is as follows:
+Flow chart of News Collecting Agent:
 ![agent-flowchart](./graph/agent_flowchart.png)
 
 
-## Technologies Used
+# Technologies Used
 
 - **FastAPI**: For creating the backend API.
 - **Supabase**: As the backend PostgreSQL database and for authentication.
@@ -20,7 +20,7 @@ The flow chart of News Collecting Agent is as follows:
 
 
 
-## Supabase Setup
+## Before start: Supabase Setup
 
 To get started with Supabase, follow these steps to set up your database and insert the necessary schema.
 
@@ -93,8 +93,8 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 data = supabase.table('supplier').select('*').execute()
 print(data)
 ```
-### Step 7: Clean Up Unnecessary Summaries
-After running the tool, you might want to filter out irrelevant summarizations. Use the following SQL command to delete entries with "NOT RELEVANT" content or null values:
+### Extra SQL Command for Cleaning Up Unnecessary Summaries
+After running the tool in practice, you might want to filter out irrelevant summarizations. Use the following SQL command to delete entries with "NOT RELEVANT" content or null values:
 
 ```sql
 DELETE FROM summary
@@ -103,9 +103,11 @@ WHERE content LIKE '%NOT RELEVANT%' OR content IS NULL;
 ### Schema Diagram
 ![schema](./graph/schema.png)
 
-## Startup Tutorial for Company News Information Collector
 
-This tutorial will guide you through the setup and usage of the Company News Information Collector tool. Follow these steps to get the tool up and running.
+
+## Startup Tutorial for Company News Collector
+
+This tutorial will guide you through the setup and usage of the Company News Collector tool. Follow these steps to get the tool up and running.
 
 ### Prerequisites
 
@@ -180,8 +182,9 @@ print(acg_financial_news[1]['link'])
 
 
 
-## Demo Deployment on Render
+## Demo Deployment on Render (Optional)
 
+By following these steps, you will have your Company News Collector tool deployed on Render, making it accessible for demonstration and testing purposes.
 To deploy the Company News Information Collector on Render for demonstration purposes, follow these steps:
 
 ### Step 1: Create a Render Account
@@ -241,12 +244,6 @@ Here is an example of what your Render deployment configuration might look like:
 - **Branch**: main
 - **Build Command**: `pip install -r requirements.txt`
 - **Start Command**: `uvicorn app:app --host 0.0.0.0 --port $PORT`
-
-### Conclusion
-
-By following these steps, you will have your Company News Collector tool deployed on Render, making it accessible for demonstration and testing purposes.
-
-
 
 
 
