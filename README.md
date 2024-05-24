@@ -53,10 +53,13 @@ To get started with Supabase, follow these steps to set up your database and ins
 
 ### Step 4: Set Up the Database Schema
 
+**Schema Diagram**
+![schema](./graph/schema.png)
+
 1. Go to the "Table Editor" tab in your Supabase project.
 2. Click on "New Table" to create the tables required for your application.
 
-Refer to the schema diagram in the `graph` folder for the table structure. Use the following SQL commands to initialize the tables:
+Refer to the schema diagram above for the table structure. Use the following SQL commands to initialize the tables:
 
 ```sql
 CREATE TABLE supplier (
@@ -106,12 +109,10 @@ After running the tool in practice, you might want to filter out irrelevant summ
 DELETE FROM summary
 WHERE content LIKE '%NOT RELEVANT%' OR content IS NULL;
 ```
-### Schema Diagram
-![schema](./graph/schema.png)
 
 
 
-## Startup Tutorial for Company News Collector
+## Getting Started
 
 This tutorial will guide you through the setup and usage of the Company News Collector tool. Follow these steps to get the tool up and running.
 
